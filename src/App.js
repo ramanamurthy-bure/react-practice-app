@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+/*
+Redux In React JS
+-> It is all about managing state values in multiple components at a time, using redux store
 
-function App() {
+Store: Combined application state from all components(BigJavaScript object)
+Provider : Provides the state data to all components
+Components : Encapsulates the main component
+Actions->Reducers->Store
+*/
+
+import React from 'react';
+import Inc from './Inc';
+
+export const App = ({count}) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <center>
+        Conut from App JS component : {count} <br/><hr/>  
+        <Inc />
+      </center>
     </div>
-  );
+  )
 }
-
 export default App;
